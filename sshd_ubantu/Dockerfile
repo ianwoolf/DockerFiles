@@ -12,7 +12,6 @@ RUN apt-get update
 #安装 ssh 服务
 RUN apt-get install -y openssh-server
 #RUN apt-get install -y language-pack-en
-#RUN apt-get install -y sysv-rc-conf
 RUN mkdir -p /var/run/sshd
 RUN mkdir -p /root/.ssh
 RUN export LANGUAGE="en_US.UTF-8"
@@ -27,11 +26,10 @@ ADD run.sh /run.sh
 ADD functions /etc/rc.d/init.d/functions
 RUN chmod 755 /run.sh
 RUN chmod 755 /etc/rc.d/init.d/functions
-RUN echo "service ssh start" >> /etc/rc.local
-#RUN sysv-rc-conf ssh on
-RUN service ssh start
 #开放端口
 EXPOSE 22
 
 #设置自启动命令
-#CMD ["/run.sh"]
+#CMD ["/etc/init.d/ssh -D"]
+CMD ["/run.sh"]
+#CMD ["service ssh start"]
