@@ -1,4 +1,4 @@
-FROM sshd:file
+FROM sshd:my
 MAINTAINER waitfish from dockerpool.com(btw515wolf2@gmail.com)
 #RUN service ssh start
 RUN \
