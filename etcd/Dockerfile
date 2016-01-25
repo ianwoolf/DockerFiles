@@ -2,9 +2,9 @@ FROM sshd:my
 MAINTAINER waitfish from dockerpool.com(btw515wolf2@gmail.com)
 #RUN service ssh start
 RUN \
-        wget https://github.com/coreos/etcd/releases/download/v0.4.6/etcd-v0.4.6-linux-amd64.tar.gz && \
-        tar -zxvf etcd-v0.4.6-linux-amd64.tar.gz && \
-        cd etcd-v0.4.6-linux-amd64 && \
+        wget https://github.com/coreos/etcd/releases/download/v2.2.3/etcd-v2.2.3-linux-amd64.tar.gz && \
+        tar -zxvf etcd-v2.2.3-linux-amd64.tar.gz && \
+        cd etcd-v2.2.3-linux-amd64 && \
         cp etcd* /bin/. && \
         apt-get update
     
@@ -16,6 +16,6 @@ ENV AUTH yes
 ADD run.sh /run.sh
 RUN chmod 755 /*.sh
 
-EXPOSE 22 4001 7001
+EXPOSE 22 2379 2380
 
 CMD ["/run.sh"]
