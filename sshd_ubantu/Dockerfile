@@ -10,8 +10,11 @@ RUN echo "deb http://mirrors.163.com/ubuntu/ trusty-backports main restricted un
 RUN apt-get update
 
 #安装 ssh 服务
+RUN apt-get install -y curl
 RUN apt-get install -y openssh-server
 #RUN apt-get install -y language-pack-en
+RUN apt-get install -y supervisor
+RUN apt-get install -y screen
 RUN mkdir -p /var/run/sshd
 RUN mkdir -p /root/.ssh
 RUN export LANGUAGE="en_US.UTF-8"
