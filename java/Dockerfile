@@ -1,4 +1,4 @@
-FROM sshd:my
+FROM ubantu:zzz
 MAINTAINER btw515wolf2@gmail.com
 
 #安装 ssh 服务

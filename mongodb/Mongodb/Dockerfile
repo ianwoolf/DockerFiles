@@ -1,4 +1,4 @@
-FROM sshd:dockerfile
+FROM ubantu:zzz
 MAINTAINER waitfish from dockerpool.com(dwj_zz@163.com)
 #RUN service ssh start
 RUN \

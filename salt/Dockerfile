@@ -1,4 +1,4 @@
-FROM sshd:file
+FROM ubantu:zzz
 MAINTAINER btw515wolf2@gmail.com
 
 RUN echo "deb http://repo.saltstack.com/apt/ubuntu/14.04/amd64/latest trusty main" >> /etc/apt/sources.list

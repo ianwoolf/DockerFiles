@@ -1,4 +1,4 @@
-FROM java:my
+FROM java:zzz
 MAINTAINER ian woolf <btw515wolf2@gmail.com> 
 
 ADD http://ftp.nluug.nl/internet/apache/zookeeper/stable/zookeeper-3.4.6.tar.gz /zookeeper.tar.gz
