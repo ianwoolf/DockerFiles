@@ -1,4 +1,4 @@
-FROM sshd:file
+FROM ubuntu:zz
 MAINTAINER btw515wolf2@gmail.com
 
 # Install Redis.

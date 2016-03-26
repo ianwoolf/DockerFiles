@@ -1,4 +1,4 @@
-FROM ubantu:zzz
+FROM ubuntu:zzz
 MAINTAINER waitfish from dockerpool.com(btw515wolf2@gmail.com)
 #RUN service ssh start
 RUN \
