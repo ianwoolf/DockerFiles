@@ -2,3 +2,6 @@ zk_kafka
 etcd/etcd-v2.2.3-linux-amd64.tar.gz
 etcd/etcd-v2.2.3-linux-amd64/
 hadoop/hadoop-base/files/hadoop-2.6.2/
+hadoop/hbase-master/files/hbase-1.2.0
+hadoop/hbase-slave/files/hbase-1.2.0
+*tmp
