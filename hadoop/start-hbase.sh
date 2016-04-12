@@ -13,7 +13,7 @@ fi
 # delete old master container and start new master container
 docker rm -f master &> /dev/null
 echo "start master container..."
-docker run -d -t --dns 127.0.0.1 -P --name master -h master.zzz -w /root hbase:master &> /dev/null
+docker run -d -t --dns 127.0.0.1 -P --name master -h master -w /root hbase:master &> /dev/null
 
 # get the IP address of master container
 FIRST_IP=$(docker inspect --format="{{.NetworkSettings.IPAddress}}" master)
@@ -23,9 +23,9 @@ i=1
 while [ $i -lt $N ]
 do
 	echo $i,$N
-	docker rm -f slave${i}.zzz &> /dev/null
+	docker rm -f slave${i} &> /dev/null
 	echo "start slave$i container..."
-	docker run -d -t --dns 127.0.0.1 -P --name slave${i} -h slave${i}.zzz -e JOIN_IP=${FIRST_IP} hbase:slave &> /dev/null
+	docker run -d -t --dns 127.0.0.1 -P --name slave${i} -h slave${i} -e JOIN_IP=${FIRST_IP} hbase:slave &> /dev/null
 	i=$(( $i + 1 ))
 done 
 
