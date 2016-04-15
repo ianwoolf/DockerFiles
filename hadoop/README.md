@@ -1,3 +1,6 @@
+## 根据某大神的hadoop集群做基础，自己修改，并增加了hbase集群的一键搭建。
+## 如有问题或bug，请提issue或pr。 多谢
+
 >中文说明请拼命往下翻页... sorry:(
 
 Quickly build arbitrary size Hadoop Cluster based on Docker
