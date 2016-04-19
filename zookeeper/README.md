@@ -1,2 +1,5 @@
-A zookeeper image that exposes client and ensemble ports. It waits for a file at /conf/zoo.cfg to start the server. 
-Ideal when you want to create an ensemble using Docker. See https://github.com/wouterd/docker-zookeeper.
+## start cluster:
+
+    docker run -idt --name zk1 -h zk1 -e Id=1 -e Zks=1-zk1,2-zk2,3-zk3 zk:zzz
+    docker run -idt --name zk2 -h zk2 -e Id=2 -e Zks=1-zk1,2-zk2,3-zk3 zk:zzz
+    docker run -idt --name zk3 -h zk3 -e Id=3 -e Zks=1-zk1,2-zk2,3-zk3 zk:zzz
