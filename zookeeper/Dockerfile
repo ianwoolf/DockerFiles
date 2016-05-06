@@ -8,7 +8,8 @@ ADD files/start.sh /start.sh
 ADD files/start-ssh-serf.sh /start-serf.sh
 RUN chmod 755 /start.sh
 RUN chmod 755 /start-serf.sh
-EXPOSE 22 2888 3888 2181
 
 #CMD ["/run.sh"]
+EXPOSE 22 2888 3888 2181
+
 CMD ["/start.sh"]
