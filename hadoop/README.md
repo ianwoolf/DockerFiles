@@ -495,3 +495,6 @@ Hello	2
 #####4. 测试工作
 - 参考第三部分5~7：测试serf和dnsmasq服务，开启Hadoop，运行wordcount
 - 请注意，若节点增加，请务必先测试，然后再开启Hadoop, 因为serf可能还没有发现所有节点，而dnsmasq的DNS服务器表示还没有配置好服务
+
+http://192.168.99.100:32922/master-status   60010
+http://192.168.99.100:32926/dfshealth.html#tab-datanode   50070
