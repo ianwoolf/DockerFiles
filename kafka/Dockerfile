@@ -8,5 +8,5 @@ ADD files/server.properties.initial /server.properties
 ADD files/producer.properties /kafka/config/
 ADD files/consumer.properties /kafka/config/
 
-CMD "/start-server.sh"; "bash"
 EXPOSE 22 9092
+CMD "/start-server.sh"; "bash"
